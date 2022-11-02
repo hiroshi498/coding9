@@ -8,11 +8,81 @@
 
     <title>kadai9</title>
   </head>
+
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'bko4kwq',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+
   <body>
      <!-- header -->
      <header class="header">
-      
+       <div class="header__inr">
+
+         <div class="header__h1">
+          <a href="">
+            <span class="header__h1-sub">手づくり和菓子店</span>
+            <h1>ろごさいと</h1>
+          </a>
+         </div>
+
+         <div class="header__menu">
+           <ul>
+             <li><a href="">お知らせ</a></li>
+             <li><a href="">店舗案内</a></li>
+             <li><a href="">雨品紹介</a></li>
+             <li><a href="">当店の拘り</a></li>
+             <li><a href="">お問合わせ</a></li>
+           </ul>
+         </div>
+
+         <div class="header__text">
+           <p>手づくりにこだわった
+             <br>珠玉の和菓子たちを 、
+             <br>心ゆくまでご堪能ください。
+           </p>
+         </div>
+       </div>
     </header>
+
+    <!-- NEWS -->
+
+    <div class="news">
+      <div class="news__inr">
+        <h2>お知らせ</h2>
+        <div class="news__content">
+
+          <div class="news__content-block">
+            <a href="">
+              <div class="news__time">2012.00.00</div>
+              <div class="news__text">ここにテキストが入ります。ここにテキストが入ります。</div>
+            </a>
+          </div>
+
+          <div class="news__content-block">
+            <a href="">
+              <div class="news__time">2012.00.00</div>
+              <div class="news__text">ここにテキストが入ります。ここにテキストが入ります。</div>
+            </a>
+          </div>
+
+          <div class="news__content-block">
+            <a href="">
+              <div class="news__time">2012.00.00</div>
+              <div class="news__text">ここにテキストが入ります。ここにテキストが入ります。</div>
+            </a>
+          </div>
+
+          <div class="btn"><a href="">もっと見る</a></div>
+        </div>
+      </div>
+    </div>
 
 
     <script type="text/javascript" src="javascript/style.js"></script>

@@ -426,6 +426,8 @@ th {
 
 
 body {
+  max-width: 1280px;
+  margin: 0 auto;
   font-family: 'Helvetica';
 }
 
@@ -438,6 +440,151 @@ html {
   font-size: 62.5%;
 }
 
-
 //header
 
+.header{
+  background-image: url(../image/mainvisual-back.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 659px;
+  margin: 0 auto 71px auto;
+  &__inr{
+    max-width: 1166px;
+    margin: 0 auto 0 auto;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    .header__h1{
+      writing-mode: vertical-rl;
+      h1{
+        font-size: 4.8rem;
+        font-family: ta-fuga-fude, sans-serif;
+      }
+      .header__h1-sub{
+        font-size: 1.4rem;
+        font-family: 'ヒラギノ明朝 ProN';
+        margin-left: 46x;
+      }
+      a:hover{
+        opacity: 0.7;
+      }
+    }
+    .header__menu{
+      font-family: 'ヒラギノ明朝 ProN';
+      ul{
+        display: flex;
+        li{
+          list-style: none;
+          margin-left: 40px;
+          writing-mode: vertical-rl;
+          a{
+            display: block;
+            font-size: 1.6rem;
+          }
+          a:hover{
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+    .header__text{
+      width: 201px;
+      height: 373px;
+      background-color: black;
+      color: #FFFFFF;
+      writing-mode: vertical-rl;
+      position: absolute;
+      top: 78%;
+      right: 18%;
+      z-index: 3;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 2.8;
+      letter-spacing: 0.1em;
+      font-family: 'ヒラギノ明朝 ProN';
+      outline : 1px solid #FFFFFF;
+      outline-offset : -6px;
+
+    }
+  }
+  &__inr::after{
+    content: '';
+    background-image: url(../image/mainvisual-image.png);
+    width: 100%;
+    height: 505px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 23%;
+    left: 2.5%;
+  }
+}
+
+//news
+
+.news{
+  max-width: 1000px;
+  margin: 0 auto 72px auto;
+  &__inr{
+    display: flex;
+    h2{
+      writing-mode: vertical-rl;
+      font-size: 6.4rem;
+      font-family: ta-fuga-fude, sans-serif;
+    }
+    .news__content{
+      margin: 93px 0 0 48px;
+      color: #333333;
+      font-family: 'ヒラギノ明朝 ProN';
+      &-block{
+        width: 888px;
+        a{
+          .news__time{
+            font-size: 1.2rem;
+            margin-bottom: 14px;
+          }
+          .news__text{
+            width: 100%;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+            border-bottom: black solid 1px;
+          }
+          .news__text::after{
+            content: '〉';
+            display: inline-block;
+            margin-left: 51%;
+
+          }
+          .news__text:last-child{
+            margin-bottom: 32px;
+          }
+        }
+        a:hover{
+          opacity: 0.7;
+        }
+      }
+      .btn{
+        a{
+          width: 180px;
+          height: 48px;
+          display: block;
+          margin-left: auto;
+          background-color: #5A6144;
+          font-size: 1.6rem;
+          font-family: 'ヒラギノ明朝 ProN';
+          color: #FFFFFF;
+          line-height: 48px;
+          text-align: center;
+        } 
+        a:hover{
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
