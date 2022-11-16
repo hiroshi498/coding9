@@ -425,6 +425,18 @@ html {
   margin: 0 auto 71px auto;
 }
 
+@media only screen and (max-width: 768px) {
+  .header {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .header {
+    height: 350px;
+  }
+}
+
 .header__inr {
   max-width: 1166px;
   margin: 0 auto 0 auto;
@@ -436,6 +448,28 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .header__inr {
+    padding: 40px 20px 0 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header__inr {
+    padding: 40px 20px 0 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .header__inr {
+    padding-top: 20px;
+  }
 }
 
 .header__inr .header__h1 {
@@ -450,10 +484,22 @@ html {
   font-family: ta-fuga-fude, sans-serif;
 }
 
+@media only screen and (max-width: 768px) {
+  .header__inr .header__h1 h1 {
+    font-size: 3.5rem;
+  }
+}
+
 .header__inr .header__h1 .header__h1-sub {
   font-size: 1.4rem;
   font-family: 'ヒラギノ明朝 ProN';
-  margin-left: 46x;
+  margin-left: 46px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header__inr .header__h1 .header__h1-sub {
+    font-size: 1.2rem;
+  }
 }
 
 .header__inr .header__h1 a:hover {
@@ -479,9 +525,21 @@ html {
           writing-mode: vertical-rl;
 }
 
+@media only screen and (max-width: 768px) {
+  .header__inr .header__menu ul li {
+    margin-left: 20px;
+  }
+}
+
 .header__inr .header__menu ul li a {
   display: block;
   font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .header__inr .header__menu ul li a {
+    font-size: 1.4rem;
+  }
 }
 
 .header__inr .header__menu ul li a:hover {
@@ -517,10 +575,28 @@ html {
   outline-offset: -6px;
 }
 
+@media only screen and (max-width: 768px) {
+  .header__inr .header__text {
+    width: 140px;
+    height: 240px;
+    font-size: 1.4rem;
+    top: 60%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .header__inr .header__text {
+    font-size: 1rem;
+    width: 90px;
+    height: 180px;
+  }
+}
+
 .header__inr::after {
   content: '';
   background-image: url(../image/header-image.png);
   width: 100%;
+  max-width: 913px;
   height: 505px;
   background-repeat: no-repeat;
   position: absolute;
@@ -528,9 +604,45 @@ html {
   left: 2.5%;
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .header__inr::after {
+    background-size: 97% 97%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header__inr::after {
+    width: 95%;
+    height: 350px;
+    background-size: 80% 80%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .header__inr::after {
+    background-size: 70% 70%;
+  }
+}
+
 .news {
   max-width: 1000px;
   margin: 0 auto 71px auto;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .news {
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .news {
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 }
 
 .news__inr {
@@ -548,19 +660,34 @@ html {
   letter-spacing: 0.23em;
 }
 
+@media only screen and (max-width: 768px) {
+  .news__inr h2 {
+    font-size: 4.4rem;
+  }
+}
+
 .news__inr .news__content {
+  width: 100%;
   margin: 90px 0 0 48px;
   color: #333333;
   font-family: 'ヒラギノ明朝 ProN';
 }
 
 .news__inr .news__content-block {
-  width: 888px;
+  max-width: 888px;
+  width: 100%;
 }
 
 .news__inr .news__content-block a .news__time {
   font-size: 1.2rem;
   margin-bottom: 14px;
+}
+
+@media only screen and (max-width: 768px) {
+  .news__inr .news__content-block a .news__time {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
 }
 
 .news__inr .news__content-block a .news__text {
@@ -569,12 +696,24 @@ html {
   margin-bottom: 20px;
   font-size: 1.6rem;
   border-bottom: black solid 1px;
+  position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .news__inr .news__content-block a .news__text {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+  }
 }
 
 .news__inr .news__content-block a .news__text::after {
   content: '〉';
   display: inline-block;
-  margin-left: 51%;
+  position: absolute;
+  top: 0;
+  left: 97%;
 }
 
 .news__inr .news__content-block a .news__text:last-child {
@@ -612,6 +751,24 @@ html {
   font-family: 'ヒラギノ明朝 ProN';
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .mainvisual {
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mainvisual {
+    height: 400px;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-size: 100% 100%;
+  }
+}
+
 .mainvisual__inr {
   width: 100%;
   height: 100%;
@@ -639,6 +796,13 @@ html {
   z-index: 999;
 }
 
+@media only screen and (max-width: 768px) {
+  .mainvisual__inr .mainvisual__text {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+}
+
 .mainvisual__inr .mainvisual__text .mainvisual__text-block {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
@@ -646,10 +810,22 @@ html {
   margin-left: 24px;
 }
 
+@media only screen and (max-width: 768px) {
+  .mainvisual__inr .mainvisual__text .mainvisual__text-block {
+    margin-left: 16px;
+  }
+}
+
 .mainvisual__inr .mainvisual__text .mainvisual__text-block p {
   display: inline-block;
   background-color: #FFFFFF;
   padding: 16px 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .mainvisual__inr .mainvisual__text .mainvisual__text-block p {
+    padding: 8px 4px;
+  }
 }
 
 .mainvisual__inr .mainvisual__company {
@@ -659,6 +835,12 @@ html {
           writing-mode: vertical-rl;
   margin-top: 300px;
   z-index: 999;
+}
+
+@media only screen and (max-width: 768px) {
+  .mainvisual__inr .mainvisual__company {
+    margin-top: 100px;
+  }
 }
 
 .mainvisual__inr .mainvisual__company-sub {
@@ -690,6 +872,7 @@ html {
   background-image: url("../image/maincontent-back.png");
   width: 100%;
   height: auto;
+  padding-bottom: 33px;
 }
 
 .maincontent__inr {
@@ -698,11 +881,65 @@ html {
   padding-top: 81px;
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .maincontent__inr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent__inr {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .maincontent__inr .maincontent__h2top {
+  max-width: 500px;
   font-size: 6.4rem;
   font-family: ta-fuga-fude, sans-serif;
   position: relative;
-  margin-bottom: 112px;
+  margin: 0 112px 0 25px;
+}
+
+@media screen and (max-width: 1075px) {
+  .maincontent__inr .maincontent__h2top {
+    text-align: center;
+    margin: 20px 0 50px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .maincontent__h2top {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .maincontent__inr .maincontent__h2top {
+    font-size: 3.5rem;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 }
 
 .maincontent__inr .maincontent__h2top p {
@@ -712,22 +949,75 @@ html {
   margin-top: 16px;
 }
 
+@media screen and (max-width: 430px) {
+  .maincontent__inr .maincontent__h2top p {
+    font-size: 1.5rem;
+  }
+}
+
 .maincontent__inr .maincontent__h2top::before {
   content: '';
   background-image: url(../image/mainvisual-line.png);
   background-repeat: no-repeat;
-  display: block;
   width: 436px;
   height: 120px;
   position: absolute;
-  top: -50px;
+  top: -45px;
   left: -50px;
+}
+
+@media screen and (max-width: 1075px) {
+  .maincontent__inr .maincontent__h2top::before {
+    max-width: 100%;
+    left: -50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .maincontent__h2top::before {
+    background-size: 75% 65%;
+    top: -30px;
+    left: 10px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .maincontent__inr .maincontent__h2top::before {
+    max-width: 90% 4926;
+  }
 }
 
 .maincontent__inr .maincontent__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .maincontent__inr .maincontent__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .maincontent__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 }
 
 .maincontent__inr .maincontent__block-text {
@@ -740,13 +1030,54 @@ html {
   margin: 87px 68px 0 0;
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .maincontent__inr .maincontent__block-text {
+    line-height: 1.6;
+    margin: 80px 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .maincontent__block-text {
+    line-height: 1.2;
+    margin: 80px 0 0 0;
+    font-size: 1.4rem;
+  }
+}
+
 .maincontent__inr .maincontent__block-img {
   position: relative;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .maincontent__inr .maincontent__block-img {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .maincontent__block-img {
+    margin-top: 50px;
+  }
 }
 
 .maincontent__inr .maincontent__block-img img {
   width: 460px;
   height: 345px;
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .maincontent__block-img img {
+    width: 300px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 768px) and (max-width: 430px) {
+  .maincontent__inr .maincontent__block-img img {
+    width: 220px;
+    height: 170px;
+  }
 }
 
 .maincontent__inr .maincontent__block-imgunder {
@@ -755,6 +1086,20 @@ html {
   width: 480px;
   top: -40px;
   right: -60px;
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .maincontent__block-imgunder {
+    width: 300px;
+    right: -20px;
+    top: -20px;
+  }
+}
+
+@media only screen and (max-width: 768px) and (max-width: 430px) {
+  .maincontent__inr .maincontent__block-imgunder {
+    width: 210px;
+  }
 }
 
 .maincontent__inr .maincontent__block-imgtop {
@@ -774,17 +1119,83 @@ html {
   font-family: 'ヒラギノ明朝 ProN';
 }
 
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .maincontent__block-imgtop {
+    width: 40px;
+    height: 140px;
+    line-height: 40px;
+    top: -60px;
+    right: -43px;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .maincontent__inr .maincontent__block-imgtop {
+    width: 30px;
+    height: 100px;
+    line-height: 30px;
+    font-size: 1.4rem;
+  }
+}
+
 .maincontent__inr .maincontent__block-imgtop span {
   font-size: 2.4rem;
   margin-top: 16px;
 }
 
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .maincontent__block-imgtop span {
+    margin-top: 10px;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .maincontent__inr .maincontent__block-imgtop span {
+    font-size: 1.8rem;
+  }
+}
+
 .maincontent__inr .maincontent__block2 {
   margin-top: 148px;
+  text-orientation: upright;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .maincontent__inr .maincontent__block2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 80px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .maincontent__block2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 80px;
+  }
 }
 
 .maincontent__inr .maincontent__block2 .maincontent__block-text2 {
   margin: 73px 0 0 68px;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .maincontent__inr .maincontent__block2 .maincontent__block-text2 {
+    margin: 73px auto 0 auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .maincontent__block2 .maincontent__block-text2 {
+    margin: 73px auto 0 auto;
+  }
 }
 
 .maincontent__inr .maincontent__block2 .maincontent__block-imgunder {
@@ -792,40 +1203,273 @@ html {
   left: -40px;
 }
 
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .maincontent__block2 .maincontent__block-imgunder {
+    left: -20px;
+    top: -20px;
+  }
+}
+
 .maincontent__inr .maincontent__block2 .maincontent__block-imgtop {
   position: absolute;
-  top: -80px;
-  left: -70px;
+  top: -60px;
+  left: -43px;
 }
 
 .maincontent__inr .maincontent__h2bottom {
+  max-width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   font-size: 6.4rem;
   font-family: ta-fuga-fude, sans-serif;
   position: relative;
-  margin-top: 99px;
-  text-align: right;
+  margin: 99px 0 0 auto;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .maincontent__inr .maincontent__h2bottom {
+    margin: 99px 0 30px 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .maincontent__h2bottom {
+    max-width: 100%;
+    font-size: 4rem;
+    margin: 99px 0 30px 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .maincontent__inr .maincontent__h2bottom::after {
   content: '';
   background-image: url(../image/mainvisual-line2.png);
   background-repeat: no-repeat;
-  display: block;
-  width: 436px;
+  width: 372px;
   height: 120px;
   position: absolute;
-  top: -50px;
-  right: -110px;
+  top: -45px;
+  left: -50px;
 }
 
-.maincontent__inr .info .info__main {
+@media screen and (max-width: 1075px) {
+  .maincontent__inr .maincontent__h2bottom::after {
+    max-width: 100%;
+    right: -50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .maincontent__h2bottom::after {
+    background-size: 100% 70%;
+    top: -30px;
+    left: 40px;
+  }
+}
+
+.maincontent__inr .info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  margin-top: 19px;
+  font-family: 'ヒラギノ明朝 ProN';
+}
+
+.maincontent__inr .info .info__back {
+  width: 415px;
+  height: 311px;
+  margin-top: 50px;
+  margin-right: 240px;
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .info .info__back {
+    width: 300px;
+    height: 280px;
+    max-width: 100%;
+    height: 100%;
+    margin-top: 80px;
+    margin-right: 180px;
+  }
+}
+
+.maincontent__inr .info__inr {
   width: 580px;
   height: 320px;
-  font-size: 1.4rem;
+  background-color: #5A6144;
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .info__inr {
+    width: 400px;
+    height: 250px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (max-width: 430px) {
+  .maincontent__inr .info__inr {
+    height: 220px;
+    max-height: none;
+  }
+}
+
+.maincontent__inr .info__inr .info__main {
+  width: 100%;
+  max-width: 474px;
+  margin: 0 auto;
+  padding-top: 31px;
+  font-size: 1.6rem;
   color: #FFFFFF;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
-  background-color: #5A6144;
+  text-orientation: upright;
+  letter-spacing: 0.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .info__inr .info__main {
+    font-size: 1.2rem;
+    padding: 15px;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .maincontent__inr .info__inr .info__main {
+    font-size: 1.1rem;
+  }
+}
+
+.maincontent__inr .info__inr .info__main span {
+  font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .info__inr .info__main span {
+    font-size: 1rem;
+  }
+}
+
+.maincontent__inr .info__inr .info__main .info__symbol {
+  text-combine-upright: all;
+}
+
+.maincontent__inr .info__inr .info__main .businesshours .b__time {
+  text-combine-upright: all;
+  font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent__inr .info__inr .info__main .businesshours .b__time {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .maincontent__inr .info__inr .info__main .businesshours .b__time {
+    font-size: 1rem;
+  }
+}
+
+.maincontent__inr .info__inr .info__main .businesshours .b__time:nth-child(2n) {
+  margin: 11px 0;
+}
+
+.footer {
+  width: 100%;
+  padding: 72px 0 14px 0;
+  background-color: #111111;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__inr .footer__company {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3.2rem;
+  font-family: ta-fuga-fude, sans-serif;
+  margin-bottom: 55px;
+}
+
+.footer__inr .footer__company span {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-family: 'ヒラギノ明朝 ProN';
+}
+
+.footer__inr .footer__menu {
+  font-family: 'ヒラギノ明朝 ProN';
+  margin-bottom: 48px;
+}
+
+.footer__inr .footer__menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__inr .footer__menu ul li {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  letter-spacing: 10px;
+}
+
+.footer__inr .footer__menu ul li a {
+  font-size: 1.6rem;
+}
+
+.footer__inr .copyright {
+  text-align: center;
+  font-size: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
