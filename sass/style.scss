@@ -450,6 +450,9 @@ html {
   height: 659px;
   margin: 0 auto 71px auto;
   @media #{$sp}{
+    margin: 0 auto 40px auto;
+  }
+  @media #{$sp}{
     height: 450px;
   }
   @media screen and (max-width:430px){
@@ -539,6 +542,7 @@ html {
       font-family: 'ヒラギノ明朝 ProN';
       outline : 1px solid #FFFFFF;
       outline-offset : -6px;
+      box-shadow: 6px 6px rgba(0,0,0,0.2);
       @media #{$sp}{
         width: 140px;
         height: 240px;
@@ -571,7 +575,8 @@ html {
       background-size: 80% 80%;
     }
     @media screen and (max-width:430px){
-      background-size: 70% 70%;
+      top: 50%;
+      background-size: 80%;
     }
   }
 }
@@ -581,6 +586,7 @@ html {
 .news{
   max-width: 1000px;
   margin: 0 auto 71px auto;
+  margin: 0 auto 40px auto;
   @media #{$tab}{
     padding: 0 20px;
     box-sizing: border-box;
@@ -597,7 +603,7 @@ html {
       font-family: ta-fuga-fude, sans-serif;
       letter-spacing: 0.23em;
       @media #{$sp}{
-        font-size: 4.4rem;
+        font-size: 4rem;
       }
     }
     .news__content{
@@ -605,6 +611,9 @@ html {
       margin: 90px 0 0 48px;
       color: #333333;
       font-family: 'ヒラギノ明朝 ProN';
+      @media #{$sp}{
+        margin: 90px 0 0 25px;
+      }
       &-block{
         max-width: 888px;
         width: 100%;
@@ -674,15 +683,15 @@ html {
   width: 100%;
   height: 540px;
   background-repeat: no-repeat;
-  background-size: 100%;
   position: relative;
   font-family: 'ヒラギノ明朝 ProN';
   @media #{$tab}{
+    height:480px;
     padding: 0 20px;
     box-sizing: border-box;
   }
   @media #{$sp}{
-    height: 400px;
+    height: 370px;
     padding: 0 20px;
     box-sizing: border-box;
     background-size: 100% 100%;
@@ -699,6 +708,9 @@ html {
       display: flex;
       margin-top: 76px;
       z-index: 999;
+      @media #{$tab}{
+        margin-top: 30px;
+      }
       @media #{$sp}{
         font-size: 1.5rem;
         margin-top: 0;
@@ -775,14 +787,13 @@ html {
       align-items: center;
     }
     .maincontent__h2top{
-      max-width: 500px;
       font-size: 6.4rem;
       font-family: ta-fuga-fude, sans-serif;
       position: relative;
-      margin: 0 112px 0 25px;
+      margin: 0 0 112px 25px;
       @media screen and (max-width:1075px){
         text-align: center;
-        margin: 20px 0 50px 0;
+        margin: 10px 0 30px 0;
       }
       @media #{$sp}{
         font-size: 4rem;
@@ -812,7 +823,7 @@ html {
       top: -45px;
       left: -50px;
       @media screen and (max-width:1075px){
-        max-width: 100%;
+        max-width: 97%;
         left: -50px;
       }
       @media #{$sp}{
@@ -821,11 +832,13 @@ html {
         left: 10px;
       }
       @media screen and (max-width:430px){
-        max-width: 90%4926;
+        max-width: 90%;
       }
     }
     .maincontent__block{
       display: flex;
+      justify-content: space-around;
+      position: relative;
       @media #{$tab}{
         flex-direction: column-reverse;
         align-items: center;
@@ -839,16 +852,16 @@ html {
       &-text{
         writing-mode: vertical-lr;
         font-size: 1.6rem;
-        line-height: 1.4;
-        letter-spacing: 0.2em;
-        margin: 87px 68px 0 0;
+        line-height: 1.8;
+        letter-spacing: 0.1em;
+        margin: 87px 0 0 0;
         @media #{$tab}{
           line-height: 1.6;
           margin: 80px 0 0 0;
         }
         @media #{$sp}{
           line-height: 1.2;
-          margin: 80px 0 0 0;
+          margin: 50px 0 0 0;
           font-size: 1.4rem;
         }
       }
@@ -904,7 +917,7 @@ html {
            width: 40px;
            height: 140px;
            line-height: 40px;
-           top: -60px;
+           top: -55px;
            right: -43px;
            font-size: 1.6rem;
          }
@@ -928,24 +941,53 @@ html {
        }
       }
     }
+    .maincontent__block::before{
+      content: '';
+      background-image: url(../image/back.png);
+      width: 100%;
+      max-width: 468px;
+      height: 330px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      display: block;
+      position: absolute;
+      top: -70%;
+      left: -14%;
+      @media #{$tab}{
+        top: -25%;
+        left: -35%;
+        background-size: 70% 70%;
+        @media #{$sp}{
+          background-size: 40% 40%;
+        }
+      }
+    }
+
+    .maincontent__block:last-child::before{
+      content: none;
+    }
+  
     .maincontent__block2{
       margin-top: 148px;
       text-orientation: upright;
+      position: relative;
+      margin-bottom: 130px;
       @media #{$tab}{
         flex-direction: column;
-        margin-top: 80px;
+        margin-top: 60px;
       }
       @media #{$sp}{
         flex-direction: column;
-        margin-top: 80px;
+        margin-top: 30px;
       }
       .maincontent__block-text2{
-        margin: 73px 0 0 68px;
+        margin: 73px 0 0 0;
         @media #{$tab}{
           margin: 73px auto 0 auto;
         }
         @media #{$sp}{
-          margin: 73px auto 0 auto;
+          margin: 53px auto 0 auto;
+          line-height: 1.3;
         }
       }
       .maincontent__block-imgunder{
@@ -958,15 +1000,42 @@ html {
        }
       .maincontent__block-imgtop{
         position: absolute;
-        top: -60px;
-        left: -43px;
+        top: -85px;
+        left: -75px;
+        span{
+          font-size: 2.4rem;
+          margin-top: 16px;
+          @media #{$sp}{
+            margin-top: 0;
+            font-size: 2rem;
+          }
+          @media screen and (max-width:430px){
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+    .maincontent__block2::after{
+      content: '';
+      background-image: url(../image/back2.png);
+      width: 100%;
+      max-width: 468px;
+      height: 330px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      display: block;
+      position: absolute;
+      top: -75%;
+      right: -14%;
+      @media #{$tab}{
+        top: -73%;
+        right: -62%;
+        background-size: 70%;
       }
     }
 
     .maincontent__h2bottom{
-      max-width: 500px;
-      display: flex;
-      justify-content: end;
+      text-align: end;
       font-size: 6.4rem;
       font-family: ta-fuga-fude, sans-serif;
       position: relative;
@@ -978,7 +1047,7 @@ html {
       @media #{$sp}{
         max-width: 100%;
         font-size: 4rem;
-        margin: 99px 0 30px 0;
+        margin: 80px 0 20px 0;
         justify-content: center;
       }
     }
@@ -986,11 +1055,12 @@ html {
       content:'';
       background-image: url(../image/mainvisual-line2.png);
       background-repeat: no-repeat;
+      max-width: 372px;
       width: 372px;
       height: 120px;
       position: absolute;
       top: -45px;
-      left: -50px;
+      right: -40px;
       @media screen and (max-width:1075px){
         max-width: 100%;
         right: -50px;
@@ -1038,7 +1108,7 @@ html {
         max-width: 100%;
         max-height: 100%;
         @media screen and (max-width:430px){
-          height: 220px;
+          height: 240px;
           max-height: none;
         }
       }
@@ -1058,7 +1128,7 @@ html {
         line-height: 1.5;
         @media #{$sp}{
           font-size: 1.2rem;
-          padding: 15px;
+          padding: 20px;
           height: 100%;
         }
         @media screen and (max-width:430px){
@@ -1091,6 +1161,24 @@ html {
        }
      }
    }
+   .info::before{
+    content: '';
+    background-image: url(../image/back.png);
+    width: 100%;
+    max-width: 468px;
+    height: 330px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    top: -90%;
+    left: -22%;
+    @media #{$tab}{
+      top: -63%;
+      right: -2%;
+      background-size: 70%;
+    }
+  }
   }
 }
 
@@ -1103,6 +1191,9 @@ html {
   color: #FFFFFF;
   display: flex;
   justify-content: center;
+  @media #{$sp}{
+    padding: 30px 0 14px 0;
+  }
   &__inr{
     .footer__company{
       display: flex;
@@ -1111,6 +1202,9 @@ html {
       font-size: 3.2rem;
       font-family: ta-fuga-fude, sans-serif;
       margin-bottom: 55px;
+      @media #{$sp}{
+        margin-bottom: 40px;
+      }
       span{
         font-size: 1.2rem;
         margin-bottom: 10px;
@@ -1120,6 +1214,9 @@ html {
     .footer__menu{
       font-family: 'ヒラギノ明朝 ProN';
       margin-bottom: 48px;
+      @media #{$sp}{
+        margin-bottom: 30px;
+      }
       ul{
         display: flex;
         justify-content: space-between
