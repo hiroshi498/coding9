@@ -761,6 +761,7 @@ html {
   background-image: url(../image/mainvisual-back.png);
   width: 100%;
   height: 540px;
+  background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   font-family: 'ヒラギノ明朝 ProN';
@@ -901,6 +902,9 @@ html {
   max-width: 1020px;
   margin: 0 auto;
   padding-top: 81px;
+  padding: 81px 20px 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -1181,11 +1185,10 @@ html {
   }
 }
 
-.maincontent__inr .maincontent__block::before {
+.maincontent__inr .maincontent__block1::before {
   content: '';
   background-image: url(../image/back.png);
-  width: 100%;
-  max-width: 468px;
+  width: 468px;
   height: 330px;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -1196,21 +1199,10 @@ html {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .maincontent__inr .maincontent__block::before {
+  .maincontent__inr .maincontent__block1::before {
     top: -25%;
     left: -35%;
-    background-size: 70% 70%;
   }
-}
-
-@media only screen and (min-width: 769px) and (max-width: 1024px) and (max-width: 768px) {
-  .maincontent__inr .maincontent__block::before {
-    background-size: 40% 40%;
-  }
-}
-
-.maincontent__inr .maincontent__block:last-child::before {
-  content: none;
 }
 
 .maincontent__inr .maincontent__block2 {
@@ -1296,23 +1288,14 @@ html {
 .maincontent__inr .maincontent__block2::after {
   content: '';
   background-image: url(../image/back2.png);
-  width: 100%;
-  max-width: 468px;
+  width: 468px;
   height: 330px;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   display: block;
   position: absolute;
   top: -75%;
   right: -14%;
-}
-
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .maincontent__inr .maincontent__block2::after {
-    top: -73%;
-    right: -62%;
-    background-size: 70%;
-  }
 }
 
 .maincontent__inr .maincontent__h2bottom {
@@ -1357,7 +1340,7 @@ html {
 
 @media screen and (max-width: 1075px) {
   .maincontent__inr .maincontent__h2bottom::after {
-    max-width: 100%;
+    max-width: 80%;
     right: -50px;
   }
 }
@@ -1514,14 +1497,6 @@ html {
   position: absolute;
   top: -90%;
   left: -22%;
-}
-
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .maincontent__inr .info::before {
-    top: -63%;
-    right: -2%;
-    background-size: 70%;
-  }
 }
 
 .footer {
