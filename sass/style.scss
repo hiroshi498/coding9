@@ -959,25 +959,25 @@ html {
       padding-right: 40px;
       box-sizing: border-box;
     }
-    // .maincontent__block1::before{
-    //   content: '';
-    //   background-image: url(../image/back.png);
-    //   width: 468px;
-    //   max-width: 95%;
-    //   height: 330px;
-    //   max-height: 95%;
-    //   background-repeat: no-repeat;
-    //   display: block;
-    //   position: absolute;
-    //   top: -70%;
-    //   left: -14%;
-    //   @media #{$tab}{
-    //     top: -40%;
-    //     left: -22%;
-    //     @media #{$sp}{
-    //     }
-    //   }
-    // }
+    .maincontent__block1::before{
+      content: '';
+      background-image: url(../image/back.png);
+      width: 468px;
+      max-width: 95%;
+      height: 330px;
+      max-height: 95%;
+      background-repeat: no-repeat;
+      display: block;
+      position: absolute;
+      top: -70%;
+      left: -14%;
+      @media #{$tab}{
+        top: -40%;
+        left: -22%;
+        @media #{$sp}{
+        }
+      }
+    }
 
     .maincontent__block2{
       margin-top: 148px;
@@ -1032,22 +1032,22 @@ html {
         }
       }
     }
-    // .maincontent__block2::after{
-    //   content: '';
-    //   background-image: url(../image/back2.png);
-    //   width: 468px;
-    //   height: 330px;
-    //   background-size: contain;
-    //   background-repeat: no-repeat;
-    //   display: block;
-    //   position: absolute;
-    //   top: -75%;
-    //   right: -14%;
-    //   @media #{$tab}{
-    //     top: -80%;
-    //     right: -31%;
-    //   }
-    // }
+    .maincontent__block2::after{
+      content: '';
+      background-image: url(../image/back2.png);
+      width: 468px;
+      height: 330px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: block;
+      position: absolute;
+      top: -75%;
+      right: -14%;
+      @media #{$tab}{
+        top: -80%;
+        right: -31%;
+      }
+    }
 
     .maincontent__h2bottom{
       text-align: end;
@@ -1179,20 +1179,20 @@ html {
        }
      }
    }
-  //  .info::before{
-  //   content: '';
-  //   background-image: url(../image/back.png);
-  //   max-width: 95%;
-  //   max-height: 95%;
-  //   width: 468px;
-  //   height: 330px;
-  //   background-size: 100%;
-  //   background-repeat: no-repeat;
-  //   display: block;
-  //   position: absolute;
-  //   top: -90%;
-  //   left: -22%;
-  // }
+   .info::before{
+    content: '';
+    background-image: url(../image/back.png);
+    max-width: 95%;
+    max-height: 95%;
+    width: 468px;
+    height: 330px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    top: -90%;
+    left: -22%;
+  }
   }
 }
 

@@ -1208,6 +1208,27 @@ html {
           box-sizing: border-box;
 }
 
+.maincontent__inr .maincontent__block1::before {
+  content: '';
+  background-image: url(../image/back.png);
+  width: 468px;
+  max-width: 95%;
+  height: 330px;
+  max-height: 95%;
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  top: -70%;
+  left: -14%;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .maincontent__inr .maincontent__block1::before {
+    top: -40%;
+    left: -22%;
+  }
+}
+
 .maincontent__inr .maincontent__block2 {
   margin-top: 148px;
   text-orientation: upright;
@@ -1293,6 +1314,26 @@ html {
 @media screen and (max-width: 430px) {
   .maincontent__inr .maincontent__block2 .maincontent__block-imgtop span {
     font-size: 1.8rem;
+  }
+}
+
+.maincontent__inr .maincontent__block2::after {
+  content: '';
+  background-image: url(../image/back2.png);
+  width: 468px;
+  height: 330px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  top: -75%;
+  right: -14%;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .maincontent__inr .maincontent__block2::after {
+    top: -80%;
+    right: -31%;
   }
 }
 
@@ -1487,6 +1528,21 @@ html {
 
 .maincontent__inr .info__inr .info__main .businesshours .b__time:nth-child(2n) {
   margin: 11px 0;
+}
+
+.maincontent__inr .info::before {
+  content: '';
+  background-image: url(../image/back.png);
+  max-width: 95%;
+  max-height: 95%;
+  width: 468px;
+  height: 330px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  top: -90%;
+  left: -22%;
 }
 
 .footer {
