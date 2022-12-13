@@ -1,24 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=0.5,user-scalable=yes,initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css">
 
     <title>kadai9</title>
   </head>
-
-  <script>
-    (function(d) {
-      var config = {
-        kitId: 'bko4kwq',
-        scriptTimeout: 3000,
-        async: true
-      },
-      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-    })(document);
-  </script>
 
   <body>
      <!-- header -->
@@ -41,6 +30,28 @@
              <li><a href="">お問合わせ</a></li>
            </ul>
          </div>
+
+         <!-- ハンバーガーメニュー始まり -->
+         <div id="toggle">
+          <div id="toggle-box">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div id="nav-content">
+          <nav>
+            <ul>
+              <li><a href="">お知らせ</a></li>
+              <li><a href="">店舗案内</a></li>
+              <li><a href="">雨品紹介</a></li>
+              <li><a href="">当店の拘り</a></li>
+              <li class="header__menu-btn"><a href="">お問合わせ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- ハンバーガーメニュー終わり -->
 
          <div class="header__text">
            <p>手づくりにこだわった
@@ -134,9 +145,9 @@
             <br>私たちが和菓子を通して本当
           </div>
           <div class="maincontent__block-img">
-            <img src="image/maincontent-blockimage.png" alt="">
+            <img src="image/maincontent-blockimage.png" alt="maincontent__block-img">
             <div class="maincontent__block-imgunder">
-              <img src="image/maincontent-blockimage2.png" alt="">
+              <img src="image/maincontent-blockimage2.png" alt="maincontent__block-imgunder">
             </div>
             <div class="maincontent__block-imgtop">
               こだわり <span>壱</span>
@@ -147,9 +158,9 @@
         <div class="maincontent__block maincontent__block2">
           <div class="maincontent__block2-img"></div>
           <div class="maincontent__block-img">
-            <img src="image/maincontent-blockimage.png" alt="">
+            <img src="image/maincontent-blockimage.png" alt="maincontent__block-img">
             <div class="maincontent__block-imgunder">
-              <img src="image/image:maincontent-blockimage3.png" alt="">
+              <img src="image/image:maincontent-blockimage3.png" alt="maincontent__block-imgunder">
             </div>
             <div class="maincontent__block-imgtop">
               こだわり <span>壱</span>
@@ -179,7 +190,7 @@
 
         <div class="info">
           <div class="info__back">
-            <img src="image/maincontent-blockimage.png" alt="">
+            <img src="image/maincontent-blockimage.png" alt="info__back">
           </div>
           <div class="info__inr">
             <div class="info__main">
@@ -245,7 +256,7 @@
       <div class="copyright">©︎copy right.2022</div>
       </div>
     </footer>
-
-    <script type="text/javascript" src="javascript/style.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="javascript/style.js"></script>
   </body>
 </html>
